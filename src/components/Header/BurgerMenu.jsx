@@ -2,7 +2,7 @@ import { FaBurger } from "react-icons/fa6";
 import { useToggleMenu } from "../../stores/toggle-menu";
 
 const BurgerMenu = () => {
-  const [toggleMenu, setToggle] = useToggleMenu(false);
+  const [toggleMenu, setToggle] = useToggleMenu();
 
   return (
     <div className="sm:hidden flex items-end">

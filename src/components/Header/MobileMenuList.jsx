@@ -2,15 +2,14 @@ import { useToggleMenu } from "../../stores/toggle-menu";
 import { useActiveLinkAtom } from "../../stores/active-link";
 
 const MobileMenuLinks = ({ links }) => {
-  const [toggleMenu] = useToggleMenu(false);
+  const [toggleMenu] = useToggleMenu();
   const [activeLink, setActiveLink] = useActiveLinkAtom();
 
-  // className="border-b-1 border-solid border-white h-7 w-fit"
   return (
     <nav className="sm:hidden">
       <ul
-        className={`flex flex-col text-sm gap-y-3 p-3 ${
-          toggleMenu ? "hidden" : ""
+        className={`flex flex-col text-sm gap-y-3 py-3 px-8 ${
+          !toggleMenu ? "hidden" : ""
         }`}
       >
         {links.map((link, index) => (
