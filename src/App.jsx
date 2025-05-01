@@ -5,7 +5,11 @@ function App() {
   return (
     <div>
       <header>
-        <Header addProductLinks={true} rightNav="Your Orders" />
+        <Header
+          addProductLinks={true}
+          rightNav="Your Orders"
+          hideRightNav={true}
+        />
       </header>
       <main className="mt-30 mb-30 max-w-300 mx-auto w-full">
         <ProductsGrid />

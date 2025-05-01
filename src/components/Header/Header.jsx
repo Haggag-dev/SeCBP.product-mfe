@@ -2,7 +2,7 @@ import BurgerMenu from "./BurgerMenu";
 import DesktopMenuLinks from "./DesktopMenuLinks";
 import MobileMenuLinks from "./MobileMenuList";
 
-const Header = ({ addProductLinks, rightNav }) => {
+const Header = ({ addProductLinks, rightNav, hideRightNav }) => {
   const allLinks = ["All Products", "Clothes", "Books", "Your Orders"];
   const productLinks = ["All", "Clothes", "Books"];
 
@@ -15,7 +15,11 @@ const Header = ({ addProductLinks, rightNav }) => {
             {addProductLinks ? <DesktopMenuLinks links={productLinks} /> : null}
           </div>
           <div className="flex items-end">
-            <a className="hidden sm:block text-sm font-semibold cursor-pointer hover:text-black">
+            <a
+              className={`${
+                hideRightNav ? "hidden" : null
+              } sm:block text-sm font-semibold cursor-pointer hover:text-black`}
+            >
               {rightNav}
             </a>
             {addProductLinks ? <BurgerMenu /> : null}
