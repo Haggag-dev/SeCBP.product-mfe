@@ -2,7 +2,7 @@ import BurgerMenu from "./BurgerMenu";
 import DesktopMenuLinks from "./DesktopMenuLinks";
 import MobileMenuLinks from "./MobileMenuList";
 
-const Header = () => {
+const Header = ({ addProductLinks }) => {
   const allLinks = ["All Products", "Clothes", "Books", "Your Orders"];
   const productLinks = ["All", "Clothes", "Books"];
 
@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex max-h-8 h-full items-center justify-between w-full max-w-300">
           <div className="flex items-end gap-x-8 max-w-75 w-75">
             <div className="text-sm font-bold text-black">S-STORE</div>
-            <DesktopMenuLinks links={productLinks} />
+            {addProductLinks ? <DesktopMenuLinks links={productLinks} /> : null}
           </div>
           <div className="flex items-end">
             <a className="hidden sm:block text-sm font-semibold cursor-pointer">

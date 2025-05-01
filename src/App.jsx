@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <header>
-        <Header />
+        <Header addProductLinks={true}/>
       </header>
       <main className="mt-30 mb-30 max-w-300 mx-auto w-full">
         <ProductsGrid />
