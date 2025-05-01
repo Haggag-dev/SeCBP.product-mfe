@@ -18,11 +18,11 @@ const Header = ({ addProductLinks, rightNav }) => {
             <a className="hidden sm:block text-sm font-semibold cursor-pointer hover:text-black">
               {rightNav}
             </a>
-            <BurgerMenu />
+            {addProductLinks ? <BurgerMenu /> : null}
           </div>
         </div>
       </div>
-      <MobileMenuLinks links={allLinks} />
+      {addProductLinks ? <MobileMenuLinks links={allLinks} /> : null}
     </div>
   );
 };
