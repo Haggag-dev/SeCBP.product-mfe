@@ -1,5 +1,17 @@
+import Header from "./components/Header/Header";
+import ProductsGrid from "./components/Products Grid/ProductsGrid";
+
 function App() {
-  return <div className="text-blue-800">Hello World</div>;
+  return (
+    <div>
+      <header>
+        <Header />
+      </header>
+      <main className="mt-30 mb-30 max-w-300 mx-auto w-full">
+        <ProductsGrid />
+      </main>
+    </div>
+  );
 }
 
 export default App;
