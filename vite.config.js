@@ -11,10 +11,10 @@ export default defineConfig({
     federation({
       name: "products-app",
       filename: "remoteEntry.js",
-      remotes: {
-        host_app: "http://localhost:5001/assets/remoteEntry.js",
+      exposes: {
+        "./ProductsApp": "./src/App",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "tailwindcss"],
     }),
   ],
   build: {
