@@ -1,0 +1,8 @@
+services:
+  product-mfe:
+    image: nginx:1.27.5-alpine
+    ports:
+      - 5003:80
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
