@@ -1,9 +1,7 @@
-import useProducts from "../../hooks/useProducts";
-import { useActiveLinkAtom } from "../../stores/active-link";
+import useProducts from "../hooks/useProducts";
 
 const ProductsGrid = () => {
   const { products, loading, error } = useProducts();
-  const [activeLink] = useActiveLinkAtom();
 
   if (error) return <p>Failed to fetch products: {error}</p>;
 

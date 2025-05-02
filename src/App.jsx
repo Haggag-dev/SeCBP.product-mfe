@@ -1,5 +1,5 @@
-import Header from "./components/Header/Header";
-import ProductsGrid from "./components/Products Grid/ProductsGrid";
+import Header from "host_app/Header";
+import ProductsGrid from "./components/ProductsGrid";
 
 function App() {
   return (
