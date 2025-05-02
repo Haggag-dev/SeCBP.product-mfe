@@ -10,6 +10,9 @@ class APIClient {
   }
 
   get = () => axiosInstance.get(this.endpoint).then((res) => res.data);
+
+  post = (body) =>
+    axiosInstance.post(this.endpoint, body).then((res) => res.status);
 }
 
 export default APIClient;
